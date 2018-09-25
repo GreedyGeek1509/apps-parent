@@ -25,14 +25,14 @@ public class HomeController {
     @GetMapping(value = "/")
     public String home(Locale locale, Model model) {
         log.info("Welcome home! The client locale is {}.", locale);
-
+        String timeStamp = String.valueOf(System.currentTimeMillis());
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
         String formattedDate = dateFormat.format(date);
 
-        model.addAttribute("serverTime", formattedDate );
-        model.addAttribute("timestamp", String.valueOf(System.currentTimeMillis()) );
+        model.addAttribute("serverTime", formattedDate);
+        model.addAttribute("timestamp", timeStamp);
 
         return "home";
     }
