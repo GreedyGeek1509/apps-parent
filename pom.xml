@@ -12,6 +12,7 @@
     <modules>
         <module>spring-mvc</module>
       <module>spring-mvc-annotated</module>
+      <module>spring-rest</module>
     </modules>
 
     <name>apps-parent</name>
