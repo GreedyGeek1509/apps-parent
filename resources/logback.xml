@@ -3,7 +3,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>./logs/${project.artifactId}.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <fileNamePattern>./logs/@project.artifactId@.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
             <maxHistory>4</maxHistory>
             <totalSizeCap>1GB</totalSizeCap>
         </rollingPolicy>
